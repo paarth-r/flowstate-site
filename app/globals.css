@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #faf9f6;
+  --surface: #1a1a1a;
+  --card: #252525;
+  --border: #3a3a3a;
+  --muted: #a8a8a8;
+  --accent: #faf9f6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+/* Flowstate wordmark: weight 300, San Francisco, responsive letter-spacing */
+.wordmark {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Segoe UI", system-ui, sans-serif;
+  font-weight: 300;
+  /* ~Math.min(6, round(width * 0.012)) → min(6px, 1.2vw) */
+  letter-spacing: min(6px, 1.2vw);
+}
+
+.wordmark-tight {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Segoe UI", system-ui, sans-serif;
+  font-weight: 300;
+  /* ~Math.min(4, round(width * 0.01)) → min(4px, 1vw) */
+  letter-spacing: min(4px, 1vw);
+}
+
+@layer utilities {
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-[#FAF9F6] focus:ring-offset-2 focus:ring-offset-[#0A0A0A];
+  }
+}
