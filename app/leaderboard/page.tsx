@@ -7,7 +7,9 @@ export const metadata: Metadata = {
     "Compete on the Flowstate leaderboard. Sign in with an account, set a username, and see your rank percentile.",
 };
 
-const APP_STORE_URL = process.env.NEXT_PUBLIC_APP_STORE_URL || "#";
+const APP_STORE_URL =
+  process.env.NEXT_PUBLIC_APP_STORE_URL ||
+  "https://testflight.apple.com/join/WWhUZM6t";
 
 export default function LeaderboardPage() {
   return (

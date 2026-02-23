@@ -1,7 +1,9 @@
 import { CTAButton } from "@/components/CTAButton";
-import { ScreenshotPlaceholder } from "@/components/ScreenshotPlaceholder";
+import { ScreenshotStrip } from "@/components/ScreenshotStrip";
 
-const APP_STORE_URL = process.env.NEXT_PUBLIC_APP_STORE_URL || "#";
+const APP_STORE_URL =
+  process.env.NEXT_PUBLIC_APP_STORE_URL ||
+  "https://testflight.apple.com/join/WWhUZM6t";
 
 export default function HomePage() {
   return (
@@ -149,10 +151,8 @@ export default function HomePage() {
           >
             See it in action
           </h2>
-          <div className="mt-12 flex flex-wrap justify-center gap-6">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <ScreenshotPlaceholder key={i} index={i} />
-            ))}
+          <div className="mt-12">
+            <ScreenshotStrip />
           </div>
         </div>
       </section>

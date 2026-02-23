@@ -26,6 +26,15 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-sans)", "Inter", "system-ui", "sans-serif"],
       },
+      keyframes: {
+        "scroll-loop": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        "scroll-loop": "scroll-loop 45s linear infinite",
+      },
     },
   },
   plugins: [],
